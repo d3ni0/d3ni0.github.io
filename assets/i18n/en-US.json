@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Denio Gomes · Portfolio",
+    "description": "Portfolio by Denio Gomes showcasing omnichannel digital experiences and education products."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "languageLabel": "Language"
+  },
+  "hero": {
+    "greeting": "Hi, I’m Denio 👋",
+    "title": "Building digital experiences that deliver real outcomes",
+    "subtitle": "Specialist in turning education products into accessible, scalable digital platforms.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Let’s talk",
+    "highlightTitle": "Digital transformation",
+    "highlightCopy": "I deliver end-to-end solutions—frontend, backend, and integrations that connect teams and customers.",
+    "point1": "15+ projects led from discovery to launch",
+    "point2": "Accessibility and performance first",
+    "point3": "Integrations across education ecosystems"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Strategy, architecture, and execution for high-impact digital products.",
+    "paragraph1": "I work as a full-stack developer and technical lead, focusing on education projects that create real value for students, families, and institutions.",
+    "paragraph2": "From planning to production, I coordinate multidisciplinary teams, standardize processes, and ensure well-tested, accessible deliveries with trustworthy data for decision-making.",
+    "stat1": {
+      "label": "Experience",
+      "value": "10+ years in technology"
+    },
+    "stat2": {
+      "label": "Specialty",
+      "value": "Education ecosystems"
+    },
+    "stat3": {
+      "label": "Location",
+      "value": "Belo Horizonte · Brazil"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Modern stack for scalable applications and premium experiences.",
+    "frontend": {
+      "title": "Frontend",
+      "description": "Reactive, accessible, and responsive interfaces with UX at the core.",
+      "item1": "React · Next.js",
+      "item2": "Vue · Vite",
+      "item3": "Tailwind · Radix"
+    },
+    "backend": {
+      "title": "Backend & Data",
+      "description": "Secure APIs, partner integrations, and automated workflows.",
+      "item1": "Laravel · PHP",
+      "item2": "Node.js · Express",
+      "item3": "MySQL · Postgres"
+    },
+    "delivery": {
+      "title": "Delivery & Ops",
+      "description": "Monitoring, observability, and lean pipelines.",
+      "item1": "GitHub Actions",
+      "item2": "CI/CD",
+      "item3": "Observability"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Highlights using modern stacks focused on the learner journey.",
+    "site2": {
+      "name": "site2",
+      "description": "Institutional portal with headless architecture, CMS, and real-time integrations.",
+      "tech1": "React 18 + Vite",
+      "tech2": "TypeScript & Tailwind CSS",
+      "tech3": "Radix UI, TanStack Query"
+    },
+    "clube": {
+      "name": "clube · v3",
+      "description": "Loyalty ecosystem with a Vite frontend, React dashboard, and Laravel API for B2B integrations.",
+      "tech1": "React + Vite + Tailwind",
+      "tech2": "React Router, Axios",
+      "tech3": "Laravel 10 · Sanctum"
+    },
+    "indique": {
+      "name": "indiqueumamigo",
+      "description": "Referral program with a Vue 2 frontend, automated workflows, and a Laravel 10 API.",
+      "tech1": "Vue 2 · Vuex · Vue Router",
+      "tech2": "Axios · Sass",
+      "tech3": "Laravel 10 · SendGrid"
+    },
+    "xxi": {
+      "name": "aescoladoseculoxxi",
+      "description": "Responsive landing page using Bootstrap 5, custom components, and conversion optimization.",
+      "tech1": "HTML5 · Bootstrap 5",
+      "tech2": "Modular CSS · Animations",
+      "tech3": "Google Tag Manager"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let’s create something amazing together.",
+    "paragraph": "Open to new partnerships, consulting engagements, and purpose-driven projects. Send a message or connect on social media.",
+    "emailLabel": "Email",
+    "phoneLabel": "WhatsApp",
+    "linkedinLabel": "LinkedIn"
+  },
+  "footer": {
+    "copy": "© 2025 Denio Gomes. All rights reserved."
+  }
+}
+

@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Denio Gomes · Portfólio",
+    "description": "Portfólio de Denio Gomes com foco em experiências digitais multicanais e produtos educacionais."
+  },
+  "nav": {
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "languageLabel": "Idioma"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou Denio 👋",
+    "title": "Construindo experiências digitais com foco em resultados",
+    "subtitle": "Especialista em transformar produtos educacionais em plataformas digitais acessíveis e escaláveis.",
+    "ctaProjects": "Ver projetos",
+    "ctaContact": "Vamos conversar",
+    "highlightTitle": "Transformação digital",
+    "highlightCopy": "Entrego soluções completas: frontend, backend e integrações que conectam times e clientes.",
+    "point1": "15+ projetos liderados do zero ao ar",
+    "point2": "Foco em acessibilidade e performance",
+    "point3": "Integrações com ecossistemas educacionais"
+  },
+  "about": {
+    "title": "Sobre",
+    "subtitle": "Estratégia, arquitetura e execução para produtos digitais de alto impacto.",
+    "paragraph1": "Atuo como desenvolvedor full stack e líder técnico, com foco em projetos educacionais e experiências digitais que geram valor real para alunos, famílias e instituições.",
+    "paragraph2": "Do planejamento à publicação, coordeno equipes multidisciplinares, padronizo processos e garanto entregas bem testadas, acessíveis e com dados confiáveis para tomada de decisão.",
+    "stat1": {
+      "label": "Experiência",
+      "value": "10+ anos em tecnologia"
+    },
+    "stat2": {
+      "label": "Especialidade",
+      "value": "Ecossistemas educacionais"
+    },
+    "stat3": {
+      "label": "Localização",
+      "value": "Belo Horizonte · Brasil"
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Stack moderna para aplicações escaláveis e experiências premium.",
+    "frontend": {
+      "title": "Frontend",
+      "description": "Interfaces reativas, acessíveis e responsivas com foco em UX.",
+      "item1": "React · Next.js",
+      "item2": "Vue · Vite",
+      "item3": "Tailwind · Radix"
+    },
+    "backend": {
+      "title": "Backend & Dados",
+      "description": "APIs seguras, integrações com parceiros e automação de fluxos.",
+      "item1": "Laravel · PHP",
+      "item2": "Node.js · Express",
+      "item3": "MySQL · Postgres"
+    },
+    "delivery": {
+      "title": "Entrega & Ops",
+      "description": "Monitoramento, observabilidade e pipelines enxutos.",
+      "item1": "GitHub Actions",
+      "item2": "CI/CD",
+      "item3": "Observabilidade"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Destaques com stacks modernas e foco na jornada educacional.",
+    "site2": {
+      "name": "site2",
+      "description": "Portal institucional com arquitetura headless, CMS e integrações em tempo real.",
+      "tech1": "React 18 + Vite",
+      "tech2": "TypeScript & Tailwind CSS",
+      "tech3": "Radix UI, TanStack Query"
+    },
+    "clube": {
+      "name": "clube · v3",
+      "description": "Ecossistema de fidelidade com frontend Vite, dashboard React e API Laravel para integrações B2B.",
+      "tech1": "React + Vite + Tailwind",
+      "tech2": "React Router, Axios",
+      "tech3": "Laravel 10 · Sanctum"
+    },
+    "indique": {
+      "name": "indiqueumamigo",
+      "description": "Programa de indicação com frontend Vue 2, workflows automatizados e API Laravel 10.",
+      "tech1": "Vue 2 · Vuex · Vue Router",
+      "tech2": "Axios · Sass",
+      "tech3": "Laravel 10 · SendGrid"
+    },
+    "xxi": {
+      "name": "aescoladoseculoxxi",
+      "description": "Landing page responsiva com Bootstrap 5, componentes customizados e otimização de conversão.",
+      "tech1": "HTML5 · Bootstrap 5",
+      "tech2": "CSS modular · Animações",
+      "tech3": "Google Tag Manager"
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Vamos criar algo incrível juntos.",
+    "paragraph": "Aberto a novas parcerias, consultorias e projetos com propósito. Envie uma mensagem ou conecte-se nas redes.",
+    "emailLabel": "E-mail",
+    "phoneLabel": "WhatsApp",
+    "linkedinLabel": "LinkedIn"
+  },
+  "footer": {
+    "copy": "© 2025 Denio Gomes. Todos os direitos reservados."
+  }
+}
+

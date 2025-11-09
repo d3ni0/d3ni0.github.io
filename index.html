@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">Denio Gomes · Portfolio</title>
+    <meta
+      name="description"
+      data-i18n="meta.description"
+      content="Portfólio de Denio Gomes com foco em experiências digitais multicanal."
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="#hero" class="brand">
+          <span class="brand-mark">D3</span>
+          <span class="brand-name">Denio Gomes</span>
+        </a>
+        <button class="menu-toggle" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#about" data-i18n="nav.about">Sobre</a>
+          <a href="#skills" data-i18n="nav.skills">Habilidades</a>
+          <a href="#projects" data-i18n="nav.projects">Projetos</a>
+          <a href="#contact" data-i18n="nav.contact">Contato</a>
+        </div>
+        <div class="language-switcher">
+          <label for="language-select" data-i18n="nav.languageLabel"
+            >Idioma</label
+          >
+          <select id="language-select" aria-label="Language selector">
+            <option value="pt-BR">Português (BR)</option>
+            <option value="en-US">English (US)</option>
+            <option value="es-AR">Español (AR)</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section section">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="hero-eyebrow" data-i18n="hero.greeting">
+              Olá, eu sou Denio 👋
+            </p>
+            <h1
+              class="hero-title"
+              data-i18n="hero.title"
+            >
+              Construindo experiências digitais com foco em resultados
+            </h1>
+            <p
+              class="hero-subtitle"
+              data-i18n="hero.subtitle"
+            >
+              Especialista em transformar produtos educacionais em plataformas
+              digitais acessíveis e escaláveis.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects" data-i18n="hero.ctaProjects"
+                >Ver projetos</a
+              >
+              <a class="btn secondary" href="#contact" data-i18n="hero.ctaContact"
+                >Vamos conversar</a
+              >
+            </div>
+          </div>
+          <div class="hero-summary">
+            <div class="summary-card">
+              <h2 data-i18n="hero.highlightTitle">Transformação digital</h2>
+              <p data-i18n="hero.highlightCopy">
+                Entrego soluções completas: frontend, backend e integrações que
+                conectam times e clientes.
+              </p>
+              <ul class="summary-points">
+                <li data-i18n="hero.point1">15+ projetos liderados do zero ao ar</li>
+                <li data-i18n="hero.point2">Foco em acessibilidade e performance</li>
+                <li data-i18n="hero.point3">Integrações com ecossistemas educacionais</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container section-grid">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="about.title">Sobre</h2>
+            <p class="section-subtitle" data-i18n="about.subtitle">
+              Estratégia, arquitetura e execução para produtos digitais de alto
+              impacto.
+            </p>
+          </div>
+          <div class="section-content">
+            <p data-i18n="about.paragraph1">
+              Atuo como desenvolvedor full stack e líder técnico, com foco em
+              projetos educacionais e experiências digitais que geram valor
+              real para alunos, famílias e instituições.
+            </p>
+            <p data-i18n="about.paragraph2">
+              Do planejamento à publicação, coordeno equipes multidisciplinares,
+              padronizo processos e garanto entregas bem testadas, acessíveis e
+              com dados confiáveis para tomada de decisão.
+            </p>
+            <dl class="about-stats">
+              <div>
+                <dt data-i18n="about.stat1.label">Experiência</dt>
+                <dd data-i18n="about.stat1.value">10+ anos em tecnologia</dd>
+              </div>
+              <div>
+                <dt data-i18n="about.stat2.label">Especialidade</dt>
+                <dd data-i18n="about.stat2.value">Ecossistemas educacionais</dd>
+              </div>
+              <div>
+                <dt data-i18n="about.stat3.label">Localização</dt>
+                <dd data-i18n="about.stat3.value">Belo Horizonte · Brasil</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
+            <p class="section-subtitle" data-i18n="skills.subtitle">
+              Stack moderna para aplicações escaláveis e experiências premium.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3 data-i18n="skills.frontend.title">Frontend</h3>
+              <p data-i18n="skills.frontend.description">
+                Interfaces reativas, acessíveis e responsivas com foco em UX.
+              </p>
+              <div class="badge-group">
+                <span class="badge" data-i18n="skills.frontend.item1"
+                  >React · Next.js</span
+                >
+                <span class="badge" data-i18n="skills.frontend.item2"
+                  >Vue · Vite</span
+                >
+                <span class="badge" data-i18n="skills.frontend.item3"
+                  >Tailwind · Radix</span
+                >
+              </div>
+            </div>
+            <div class="skill-card">
+              <h3 data-i18n="skills.backend.title">Backend &amp; Dados</h3>
+              <p data-i18n="skills.backend.description">
+                APIs seguras, integrações com parceiros e automação de fluxos.
+              </p>
+              <div class="badge-group">
+                <span class="badge" data-i18n="skills.backend.item1"
+                  >Laravel · PHP</span
+                >
+                <span class="badge" data-i18n="skills.backend.item2"
+                  >Node.js · Express</span
+                >
+                <span class="badge" data-i18n="skills.backend.item3"
+                  >MySQL · Postgres</span
+                >
+              </div>
+            </div>
+            <div class="skill-card">
+              <h3 data-i18n="skills.delivery.title">Entrega &amp; Ops</h3>
+              <p data-i18n="skills.delivery.description">
+                Monitoramento, observabilidade e pipelines enxutos.
+              </p>
+              <div class="badge-group">
+                <span class="badge" data-i18n="skills.delivery.item1"
+                  >GitHub Actions</span
+                >
+                <span class="badge" data-i18n="skills.delivery.item2"
+                  >CI/CD</span
+                >
+                <span class="badge" data-i18n="skills.delivery.item3"
+                  >Observabilidade</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">
+              Destaques com stacks modernas e foco na jornada educacional.
+            </p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <header>
+                <h3 data-i18n="projects.site2.name">site2</h3>
+                <p class="project-description" data-i18n="projects.site2.description">
+                  Portal institucional com arquitetura headless, CMS e integrações
+                  em tempo real.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li data-i18n="projects.site2.tech1">React 18 + Vite</li>
+                <li data-i18n="projects.site2.tech2">TypeScript &amp; Tailwind CSS</li>
+                <li data-i18n="projects.site2.tech3">Radix UI, TanStack Query</li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <header>
+                <h3 data-i18n="projects.clube.name">clube · v3</h3>
+                <p class="project-description" data-i18n="projects.clube.description">
+                  Ecossistema de fidelidade com frontend Vite, dashboard React e
+                  API Laravel para integrações B2B.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li data-i18n="projects.clube.tech1">React + Vite + Tailwind</li>
+                <li data-i18n="projects.clube.tech2">React Router, Axios</li>
+                <li data-i18n="projects.clube.tech3">Laravel 10 · Sanctum</li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <header>
+                <h3 data-i18n="projects.indique.name">indiqueumamigo</h3>
+                <p class="project-description" data-i18n="projects.indique.description">
+                  Programa de indicação com frontend Vue 2, workflows automatizados
+                  e API Laravel 10.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li data-i18n="projects.indique.tech1">Vue 2 · Vuex · Vue Router</li>
+                <li data-i18n="projects.indique.tech2">Axios · Sass</li>
+                <li data-i18n="projects.indique.tech3">Laravel 10 · SendGrid</li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <header>
+                <h3 data-i18n="projects.xxi.name">aescoladoseculoxxi</h3>
+                <p class="project-description" data-i18n="projects.xxi.description">
+                  Landing page responsiva com Bootstrap 5, componentes customizados
+                  e otimização de conversão.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li data-i18n="projects.xxi.tech1">HTML5 · Bootstrap 5</li>
+                <li data-i18n="projects.xxi.tech2">CSS modular · Animações</li>
+                <li data-i18n="projects.xxi.tech3">Google Tag Manager</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-alt">
+        <div class="container section-grid">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="contact.title">Contato</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">
+              Vamos criar algo incrível juntos.
+            </p>
+          </div>
+          <div class="section-content">
+            <p data-i18n="contact.paragraph">
+              Aberto a novas parcerias, consultorias e projetos com propósito.
+              Envie uma mensagem ou conecte-se nas redes.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label" data-i18n="contact.emailLabel"
+                  >E-mail</span
+                >
+                <a href="mailto:contato@denio.dev" class="contact-link"
+                  >contato@denio.dev</a
+                >
+              </li>
+              <li>
+                <span class="contact-label" data-i18n="contact.phoneLabel"
+                  >WhatsApp</span
+                >
+                <a href="https://wa.me/5531999999999" class="contact-link" target="_blank" rel="noopener"
+                  >+55 (31) 99999-9999</a
+                >
+              </li>
+              <li>
+                <span class="contact-label">GitHub</span>
+                <a
+                  href="https://github.com/d3ni0"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener"
+                  >github.com/d3ni0</a
+                >
+              </li>
+              <li>
+                <span class="contact-label" data-i18n="contact.linkedinLabel"
+                  >LinkedIn</span
+                >
+                <a
+                  href="https://www.linkedin.com/in/d3ni0"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener"
+                  >linkedin.com/in/d3ni0</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p data-i18n="footer.copy">
+          © 2025 Denio Gomes. Todos os direitos reservados.
+        </p>
+        <div class="footer-language">
+          <label for="language-select-footer" data-i18n="nav.languageLabel"
+            >Idioma</label
+          >
+          <select id="language-select-footer" aria-label="Language selector footer">
+            <option value="pt-BR">Português (BR)</option>
+            <option value="en-US">English (US)</option>
+            <option value="es-AR">Español (AR)</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/i18n.js" defer></script>
+  </body>
+</html>
+
