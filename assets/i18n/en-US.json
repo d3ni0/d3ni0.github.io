@@ -13,31 +13,31 @@
   "hero": {
     "greeting": "Hi, I’m Denio 👋",
     "title": "Building digital experiences that deliver real outcomes",
-    "subtitle": "Specialist in turning education products into accessible, scalable digital platforms.",
+    "subtitle": "Specialist in turning digital products into accessible, scalable platforms.",
     "ctaProjects": "View projects",
     "ctaContact": "Let’s talk",
     "highlightTitle": "Digital transformation",
     "highlightCopy": "I deliver end-to-end solutions—frontend, backend, and integrations that connect teams and customers.",
-    "point1": "15+ projects led from discovery to launch",
+    "point1": "Projects led from discovery to launch",
     "point2": "Accessibility and performance first",
-    "point3": "Integrations across education ecosystems"
+    "point3": "Integrations across multiple ecosystems"
   },
   "about": {
     "title": "About",
-    "subtitle": "Strategy, architecture, and execution for high-impact digital products.",
-    "paragraph1": "I work as a full-stack developer and technical lead, focusing on education projects that create real value for students, families, and institutions.",
-    "paragraph2": "From planning to production, I coordinate multidisciplinary teams, standardize processes, and ensure well-tested, accessible deliveries with trustworthy data for decision-making.",
+    "subtitle": "Full-stack development for high-impact digital products.",
+    "paragraph1": "I’m a full-stack web developer with experience building websites, custom systems, and mobile applications. I work across frontend and backend, delivering complete, functional solutions.",
+    "paragraph2": "I specialize in API integrations, connecting different services and optimizing data flows between platforms. My focus is on efficient, responsive solutions aligned with client needs.",
     "stat1": {
       "label": "Experience",
-      "value": "10+ years in technology"
+      "value": "10+ years delivering end-to-end digital solutions"
     },
     "stat2": {
       "label": "Specialty",
-      "value": "Education ecosystems"
+      "value": "API integrations, automation, and data flows"
     },
     "stat3": {
       "label": "Location",
-      "value": "Belo Horizonte · Brazil"
+      "value": "Belo Horizonte · Brazil (UTC−3)"
     }
   },
   "skills": {
@@ -67,34 +67,45 @@
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Highlights using modern stacks focused on the learner journey.",
+    "subtitle": "Highlights using modern stacks across multiple business contexts.",
     "site2": {
-      "name": "site2",
+      "name": "Official Dona Clara School Site",
       "description": "Institutional portal with headless architecture, CMS, and real-time integrations.",
-      "tech1": "React 18 + Vite",
-      "tech2": "TypeScript & Tailwind CSS",
-      "tech3": "Radix UI, TanStack Query"
+      "tech1": "React",
+      "tech2": "Vite",
+      "tech3": "TypeScript",
+      "tech4": "Tailwind CSS",
+      "tech5": "Radix UI",
+      "tech6": "PHP",
+      "tech7": "Cloudflare"
     },
     "clube": {
-      "name": "clube · v3",
+      "name": "Dona Clara Loyalty Club",
       "description": "Loyalty ecosystem with a Vite frontend, React dashboard, and Laravel API for B2B integrations.",
-      "tech1": "React + Vite + Tailwind",
-      "tech2": "React Router, Axios",
-      "tech3": "Laravel 10 · Sanctum"
+      "tech1": "React",
+      "tech2": "Vite",
+      "tech3": "Tailwind CSS",
+      "tech4": "React Router",
+      "tech5": "Axios",
+      "tech6": "Laravel",
+      "tech7": "TOTVS API"
     },
     "indique": {
-      "name": "indiqueumamigo",
-      "description": "Referral program with a Vue 2 frontend, automated workflows, and a Laravel 10 API.",
-      "tech1": "Vue 2 · Vuex · Vue Router",
-      "tech2": "Axios · Sass",
-      "tech3": "Laravel 10 · SendGrid"
+      "name": "Refer a Friend · Dona Clara",
+      "description": "Referral program with a Vue frontend, automated workflows, and a Laravel API integrated with TOTVS.",
+      "tech1": "Vue",
+      "tech2": "Axios",
+      "tech3": "Sass",
+      "tech4": "Laravel",
+      "tech5": "TOTVS API",
+      "tech6": "SendGrid"
     },
     "xxi": {
-      "name": "aescoladoseculoxxi",
+      "name": "The School of the 21st Century",
       "description": "Responsive landing page using Bootstrap 5, custom components, and conversion optimization.",
-      "tech1": "HTML5 · Bootstrap 5",
-      "tech2": "Modular CSS · Animations",
-      "tech3": "Google Tag Manager"
+      "tech1": "HTML",
+      "tech2": "Bootstrap",
+      "tech3": "CSS & Animations"
     }
   },
   "contact": {
@@ -106,7 +117,7 @@
     "linkedinLabel": "LinkedIn"
   },
   "footer": {
-    "copy": "© 2025 Denio Gomes. All rights reserved."
+    "copy": "© 2025 d3ni0&trade;. All rights reserved."
   }
 }
 

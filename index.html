@@ -22,14 +22,19 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <nav class="navbar container">
         <a href="#hero" class="brand">
-          <span class="brand-mark">D3</span>
-          <span class="brand-name">Denio Gomes</span>
+          <img
+            src="assets/images/logo2.png"
+            alt="Denio Gomes logo"
+            class="brand-logo"
+          />
         </a>
         <button class="menu-toggle" aria-label="Open menu">
           <span></span>
@@ -38,8 +43,8 @@
         </button>
         <div class="nav-links">
           <a href="#about" data-i18n="nav.about">Sobre</a>
-          <a href="#skills" data-i18n="nav.skills">Habilidades</a>
           <a href="#projects" data-i18n="nav.projects">Projetos</a>
+          <a href="#skills" data-i18n="nav.skills">Habilidades</a>
           <a href="#contact" data-i18n="nav.contact">Contato</a>
         </div>
         <div class="language-switcher">
@@ -72,8 +77,8 @@
               class="hero-subtitle"
               data-i18n="hero.subtitle"
             >
-              Especialista em transformar produtos educacionais em plataformas
-              digitais acessíveis e escaláveis.
+              Especialista em transformar produtos digitais em plataformas
+              acessíveis e escaláveis.
             </p>
             <div class="hero-actions">
               <a class="btn primary" href="#projects" data-i18n="hero.ctaProjects"
@@ -92,9 +97,9 @@
                 conectam times e clientes.
               </p>
               <ul class="summary-points">
-                <li data-i18n="hero.point1">15+ projetos liderados do zero ao ar</li>
+                <li data-i18n="hero.point1">Projetos liderados do zero ao ar</li>
                 <li data-i18n="hero.point2">Foco em acessibilidade e performance</li>
-                <li data-i18n="hero.point3">Integrações com ecossistemas educacionais</li>
+                <li data-i18n="hero.point3">Integrações com múltiplos ecossistemas</li>
               </ul>
             </div>
           </div>
@@ -112,29 +117,190 @@
           </div>
           <div class="section-content">
             <p data-i18n="about.paragraph1">
-              Atuo como desenvolvedor full stack e líder técnico, com foco em
-              projetos educacionais e experiências digitais que geram valor
-              real para alunos, famílias e instituições.
+              Sou desenvolvedor web fullstack com experiência em desenvolvimento web, criação de sites, sistemas personalizados e aplicativos mobile. Atuo tanto no frontend quanto no backend, oferecendo soluções completas e funcionais.
             </p>
             <p data-i18n="about.paragraph2">
-              Do planejamento à publicação, coordeno equipes multidisciplinares,
-              padronizo processos e garanto entregas bem testadas, acessíveis e
-              com dados confiáveis para tomada de decisão.
+              Tenho expertise em integrações de APIs, conectando diferentes serviços e otimizando fluxos de dados entre plataformas. Meu foco é entregar soluções eficientes, responsivas e alinhadas às necessidades dos clientes.
             </p>
-            <dl class="about-stats">
-              <div>
-                <dt data-i18n="about.stat1.label">Experiência</dt>
-                <dd data-i18n="about.stat1.value">10+ anos em tecnologia</dd>
-              </div>
-              <div>
-                <dt data-i18n="about.stat2.label">Especialidade</dt>
-                <dd data-i18n="about.stat2.value">Ecossistemas educacionais</dd>
-              </div>
-              <div>
-                <dt data-i18n="about.stat3.label">Localização</dt>
-                <dd data-i18n="about.stat3.value">Belo Horizonte · Brasil</dd>
-              </div>
-            </dl>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">
+              Destaques com stacks modernas e experiências em múltiplos contextos de negócio.
+            </p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <figure class="project-figure">
+                <img
+                  src="assets/images/projects/site2.webp"
+                  alt="Screenshot of Site Oficial Colégio Dona Clara hero section"
+                  loading="lazy"
+                />
+              </figure>
+              <header>
+                <h3 data-i18n="projects.site2.name">Site Oficial Colégio Dona Clara</h3>
+                <p class="project-description" data-i18n="projects.site2.description">
+                  Portal institucional com arquitetura headless, CMS e integrações
+                  em tempo real.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li>
+                  <span class="iconify" data-icon="simple-icons:react"></span>
+                  <span data-i18n="projects.site2.tech1">React</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:vite"></span>
+                  <span data-i18n="projects.site2.tech2">Vite</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:typescript"></span>
+                  <span data-i18n="projects.site2.tech3">TypeScript</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:tailwindcss"></span>
+                  <span data-i18n="projects.site2.tech4">Tailwind CSS</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:radixui"></span>
+                  <span data-i18n="projects.site2.tech5">Radix UI</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:php"></span>
+                  <span data-i18n="projects.site2.tech6">PHP</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:cloudflare"></span>
+                  <span data-i18n="projects.site2.tech7">Cloudflare</span>
+                </li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <figure class="project-figure">
+                <img
+                  src="assets/images/projects/clube.webp"
+                  alt="Screenshot of clube loyalty platform"
+                  loading="lazy"
+                />
+              </figure>
+              <header>
+                <h3 data-i18n="projects.clube.name">Clube de Vantagens Colégio Dona Clara</h3>
+                <p class="project-description" data-i18n="projects.clube.description">
+                  Ecossistema de fidelidade com frontend Vite, dashboard React e
+                  API Laravel para integrações B2B.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li>
+                  <span class="iconify" data-icon="simple-icons:react"></span>
+                  <span data-i18n="projects.clube.tech1">React</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:vite"></span>
+                  <span data-i18n="projects.clube.tech2">Vite</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:tailwindcss"></span>
+                  <span data-i18n="projects.clube.tech3">Tailwind CSS</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:reactrouter"></span>
+                  <span data-i18n="projects.clube.tech4">React Router</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:axios"></span>
+                  <span data-i18n="projects.clube.tech5">Axios</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:laravel"></span>
+                  <span data-i18n="projects.clube.tech6">Laravel</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:totvs"></span>
+                  <span data-i18n="projects.clube.tech7">TOTVS API</span>
+                </li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <figure class="project-figure">
+                <img
+                  src="assets/images/projects/indique.webp"
+                  alt="Screenshot of Indique um Amigo Colégio Dona Clara"
+                  loading="lazy"
+                />
+              </figure>
+              <header>
+                <h3 data-i18n="projects.indique.name">Indique um Amigo Colégio Dona Clara</h3>
+                <p class="project-description" data-i18n="projects.indique.description">
+                  Programa de indicação com frontend Vue, workflows automatizados
+                  e API Laravel integrada ao TOTVS.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li>
+                  <span class="iconify" data-icon="simple-icons:vuedotjs"></span>
+                  <span data-i18n="projects.indique.tech1">Vue</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:axios"></span>
+                  <span data-i18n="projects.indique.tech2">Axios</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:sass"></span>
+                  <span data-i18n="projects.indique.tech3">Sass</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:laravel"></span>
+                  <span data-i18n="projects.indique.tech4">Laravel</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:totvs"></span>
+                  <span data-i18n="projects.indique.tech5">TOTVS API</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:sendgrid"></span>
+                  <span data-i18n="projects.indique.tech6">SendGrid</span>
+                </li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <figure class="project-figure">
+                <img
+                  src="assets/images/projects/xxi.webp"
+                  alt="Screenshot of A Escola do Século 21 landing page"
+                  loading="lazy"
+                />
+              </figure>
+              <header>
+                <h3 data-i18n="projects.xxi.name">A Escola do Século 21</h3>
+                <p class="project-description" data-i18n="projects.xxi.description">
+                  Landing page responsiva com Bootstrap 5, componentes customizados
+                  e otimização de conversão.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li>
+                  <span class="iconify" data-icon="simple-icons:html5"></span>
+                  <span data-i18n="projects.xxi.tech1">HTML</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:css3"></span>
+                  <span data-i18n="projects.xxi.tech2">Bootstrap</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:framer"></span>
+                  <span data-i18n="projects.xxi.tech3">CSS · Animações</span>
+                </li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -203,75 +369,6 @@
         </div>
       </section>
 
-      <section id="projects" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
-            <p class="section-subtitle" data-i18n="projects.subtitle">
-              Destaques com stacks modernas e foco na jornada educacional.
-            </p>
-          </div>
-          <div class="projects-grid">
-            <article class="project-card">
-              <header>
-                <h3 data-i18n="projects.site2.name">site2</h3>
-                <p class="project-description" data-i18n="projects.site2.description">
-                  Portal institucional com arquitetura headless, CMS e integrações
-                  em tempo real.
-                </p>
-              </header>
-              <ul class="tech-list">
-                <li data-i18n="projects.site2.tech1">React 18 + Vite</li>
-                <li data-i18n="projects.site2.tech2">TypeScript &amp; Tailwind CSS</li>
-                <li data-i18n="projects.site2.tech3">Radix UI, TanStack Query</li>
-              </ul>
-            </article>
-            <article class="project-card">
-              <header>
-                <h3 data-i18n="projects.clube.name">clube · v3</h3>
-                <p class="project-description" data-i18n="projects.clube.description">
-                  Ecossistema de fidelidade com frontend Vite, dashboard React e
-                  API Laravel para integrações B2B.
-                </p>
-              </header>
-              <ul class="tech-list">
-                <li data-i18n="projects.clube.tech1">React + Vite + Tailwind</li>
-                <li data-i18n="projects.clube.tech2">React Router, Axios</li>
-                <li data-i18n="projects.clube.tech3">Laravel 10 · Sanctum</li>
-              </ul>
-            </article>
-            <article class="project-card">
-              <header>
-                <h3 data-i18n="projects.indique.name">indiqueumamigo</h3>
-                <p class="project-description" data-i18n="projects.indique.description">
-                  Programa de indicação com frontend Vue 2, workflows automatizados
-                  e API Laravel 10.
-                </p>
-              </header>
-              <ul class="tech-list">
-                <li data-i18n="projects.indique.tech1">Vue 2 · Vuex · Vue Router</li>
-                <li data-i18n="projects.indique.tech2">Axios · Sass</li>
-                <li data-i18n="projects.indique.tech3">Laravel 10 · SendGrid</li>
-              </ul>
-            </article>
-            <article class="project-card">
-              <header>
-                <h3 data-i18n="projects.xxi.name">aescoladoseculoxxi</h3>
-                <p class="project-description" data-i18n="projects.xxi.description">
-                  Landing page responsiva com Bootstrap 5, componentes customizados
-                  e otimização de conversão.
-                </p>
-              </header>
-              <ul class="tech-list">
-                <li data-i18n="projects.xxi.tech1">HTML5 · Bootstrap 5</li>
-                <li data-i18n="projects.xxi.tech2">CSS modular · Animações</li>
-                <li data-i18n="projects.xxi.tech3">Google Tag Manager</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" class="section section-alt">
         <div class="container section-grid">
           <div class="section-header">
@@ -290,16 +387,16 @@
                 <span class="contact-label" data-i18n="contact.emailLabel"
                   >E-mail</span
                 >
-                <a href="mailto:contato@denio.dev" class="contact-link"
-                  >contato@denio.dev</a
+                <a href="mailto:deniogomes@gmail.com" class="contact-link"
+                  >deniogomes@gmail.com</a
                 >
               </li>
               <li>
                 <span class="contact-label" data-i18n="contact.phoneLabel"
                   >WhatsApp</span
                 >
-                <a href="https://wa.me/5531999999999" class="contact-link" target="_blank" rel="noopener"
-                  >+55 (31) 99999-9999</a
+                <a href="https://wa.me/5531996001077" class="contact-link" target="_blank" rel="noopener"
+                  >+55 (31) 99600-1077</a
                 >
               </li>
               <li>
@@ -317,11 +414,11 @@
                   >LinkedIn</span
                 >
                 <a
-                  href="https://www.linkedin.com/in/d3ni0"
+                  href="https://www.linkedin.com/in/deniogomes"
                   class="contact-link"
                   target="_blank"
                   rel="noopener"
-                  >linkedin.com/in/d3ni0</a
+                  >linkedin.com/in/deniogomes</a
                 >
               </li>
             </ul>
@@ -349,6 +446,7 @@
     </footer>
 
     <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/gallery.js" defer></script>
   </body>
 </html>
 

@@ -13,31 +13,31 @@
   "hero": {
     "greeting": "Olá, eu sou Denio 👋",
     "title": "Construindo experiências digitais com foco em resultados",
-    "subtitle": "Especialista em transformar produtos educacionais em plataformas digitais acessíveis e escaláveis.",
+    "subtitle": "Especialista em transformar produtos digitais em plataformas acessíveis e escaláveis.",
     "ctaProjects": "Ver projetos",
     "ctaContact": "Vamos conversar",
     "highlightTitle": "Transformação digital",
     "highlightCopy": "Entrego soluções completas: frontend, backend e integrações que conectam times e clientes.",
-    "point1": "15+ projetos liderados do zero ao ar",
+    "point1": "Projetos liderados do zero ao ar",
     "point2": "Foco em acessibilidade e performance",
-    "point3": "Integrações com ecossistemas educacionais"
+    "point3": "Integrações com múltiplos ecossistemas"
   },
   "about": {
     "title": "Sobre",
-    "subtitle": "Estratégia, arquitetura e execução para produtos digitais de alto impacto.",
-    "paragraph1": "Atuo como desenvolvedor full stack e líder técnico, com foco em projetos educacionais e experiências digitais que geram valor real para alunos, famílias e instituições.",
-    "paragraph2": "Do planejamento à publicação, coordeno equipes multidisciplinares, padronizo processos e garanto entregas bem testadas, acessíveis e com dados confiáveis para tomada de decisão.",
+    "subtitle": "Desenvolvimento full stack para produtos digitais de alto impacto.",
+    "paragraph1": "Sou desenvolvedor web fullstack com experiência em desenvolvimento web, criação de sites, sistemas personalizados e aplicativos mobile. Atuo tanto no frontend quanto no backend, oferecendo soluções completas e funcionais.",
+    "paragraph2": "Tenho expertise em integrações de APIs, conectando diferentes serviços e otimizando fluxos de dados entre plataformas. Meu foco é entregar soluções eficientes, responsivas e alinhadas às necessidades dos clientes.",
     "stat1": {
       "label": "Experiência",
-      "value": "10+ anos em tecnologia"
+      "value": "10+ anos construindo soluções digitais completas"
     },
     "stat2": {
       "label": "Especialidade",
-      "value": "Ecossistemas educacionais"
+      "value": "Integrações de APIs, automações e fluxos de dados"
     },
     "stat3": {
       "label": "Localização",
-      "value": "Belo Horizonte · Brasil"
+      "value": "Belo Horizonte · Brasil (UTC−3)"
     }
   },
   "skills": {
@@ -67,34 +67,45 @@
   },
   "projects": {
     "title": "Projetos",
-    "subtitle": "Destaques com stacks modernas e foco na jornada educacional.",
+    "subtitle": "Destaques com stacks modernas e experiências em múltiplos contextos de negócio.",
     "site2": {
-      "name": "site2",
+      "name": "Site Oficial Colégio Dona Clara",
       "description": "Portal institucional com arquitetura headless, CMS e integrações em tempo real.",
-      "tech1": "React 18 + Vite",
-      "tech2": "TypeScript & Tailwind CSS",
-      "tech3": "Radix UI, TanStack Query"
+      "tech1": "React",
+      "tech2": "Vite",
+      "tech3": "TypeScript",
+      "tech4": "Tailwind CSS",
+      "tech5": "Radix UI",
+      "tech6": "PHP",
+      "tech7": "Cloudflare"
     },
     "clube": {
-      "name": "clube · v3",
+      "name": "Clube de Vantagens Colégio Dona Clara",
       "description": "Ecossistema de fidelidade com frontend Vite, dashboard React e API Laravel para integrações B2B.",
-      "tech1": "React + Vite + Tailwind",
-      "tech2": "React Router, Axios",
-      "tech3": "Laravel 10 · Sanctum"
+      "tech1": "React",
+      "tech2": "Vite",
+      "tech3": "Tailwind CSS",
+      "tech4": "React Router",
+      "tech5": "Axios",
+      "tech6": "Laravel",
+      "tech7": "TOTVS API"
     },
     "indique": {
-      "name": "indiqueumamigo",
-      "description": "Programa de indicação com frontend Vue 2, workflows automatizados e API Laravel 10.",
-      "tech1": "Vue 2 · Vuex · Vue Router",
-      "tech2": "Axios · Sass",
-      "tech3": "Laravel 10 · SendGrid"
+      "name": "Indique um Amigo Colégio Dona Clara",
+      "description": "Programa de indicação com frontend Vue, workflows automatizados e API Laravel integrada ao TOTVS.",
+      "tech1": "Vue",
+      "tech2": "Axios",
+      "tech3": "Sass",
+      "tech4": "Laravel",
+      "tech5": "TOTVS API",
+      "tech6": "SendGrid"
     },
     "xxi": {
-      "name": "aescoladoseculoxxi",
+      "name": "A Escola do Século 21",
       "description": "Landing page responsiva com Bootstrap 5, componentes customizados e otimização de conversão.",
-      "tech1": "HTML5 · Bootstrap 5",
-      "tech2": "CSS modular · Animações",
-      "tech3": "Google Tag Manager"
+      "tech1": "HTML",
+      "tech2": "Bootstrap",
+      "tech3": "CSS · Animações"
     }
   },
   "contact": {
@@ -106,7 +117,7 @@
     "linkedinLabel": "LinkedIn"
   },
   "footer": {
-    "copy": "© 2025 Denio Gomes. Todos os direitos reservados."
+    "copy": "© 2025 d3ni0&trade;. Todos os direitos reservados."
   }
 }
 
