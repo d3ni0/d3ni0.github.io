@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propostas de Desenvolvimento</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            padding: 20px;
+            color: #e5e5e5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 0;
+        }
+
+        header {
+            text-align: center;
+            color: #e5e5e5;
+            margin-bottom: 40px;
+            padding: 10px 20px 30px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            color: #a0a0a0;
+            font-weight: 400;
+        }
+
+        .proposals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .proposal-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .proposal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+
+        .proposal-card:hover {
+            transform: translateY(-3px);
+            border-color: #3b82f6;
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .proposal-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .proposal-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .proposal-details {
+            margin-bottom: 20px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .detail-item .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            color: #3b82f6;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #a0a0a0;
+            min-width: 100px;
+        }
+
+        .detail-value {
+            color: #e5e5e5;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3b82f6;
+            margin: 15px 0;
+        }
+
+        .deadline {
+            font-size: 1.1rem;
+            color: #8b5cf6;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .badge-warning {
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        .badge-info {
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .link-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+            border: none;
+        }
+
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .notes {
+            margin-top: 20px;
+            padding: 24px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid #2a2a2a;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .notes h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .notes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .notes li {
+            padding: 8px 0;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+
+        .notes li::before {
+            content: "• ";
+            color: #3b82f6;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        footer {
+            text-align: center;
+            color: #a0a0a0;
+            margin-top: 40px;
+            padding: 30px 20px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .proposals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .proposal-card {
+                padding: 20px;
+            }
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="/assets/images/logo2.png" alt="Denio Gomes Logo">
+        </div>
+        <header>
+            <h1>Propostas de Desenvolvimento</h1>
+            <p>Serviços de desenvolvimento web e integrações</p>
+        </header>
+
+        <div class="proposals-grid">
+            <!-- Proposta 1 -->
+            <div class="proposal-card">
+                <div class="proposal-number">1</div>
+                <h2 class="proposal-title">Bot de Registro e Gestão de Incidentes</h2>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Telegram</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">Bot</span>
+                </div>
+
+                <div class="proposal-details">
+                    <div class="detail-item">
+                        <span class="detail-label">💰 Valor:</span>
+                        <span class="detail-value price">R$ 2.500,00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">⏱️ Prazo:</span>
+                        <span class="detail-value deadline">15 dias úteis</span>
+                    </div>
+                </div>
+
+                <a href="https://kiosferajobs.com/job-details/ZD9H6OE3JQDZ/bot-de-registro-e-gestao-de-incidentes-telegram-php" 
+                   target="_blank" 
+                   class="link-button">Ver Detalhes →</a>
+            </div>
+
+            <!-- Proposta 2 -->
+            <div class="proposal-card">
+                <div class="proposal-number">2</div>
+                <h2 class="proposal-title">Ampliação de Integração Kobana</h2>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">API</span>
+                    <span class="tech-tag">Kobana</span>
+                    <span class="tech-tag">Integração</span>
+                </div>
+
+                <div class="proposal-details">
+                    <div class="detail-item">
+                        <span class="detail-label">💰 Valor:</span>
+                        <span class="detail-value price">R$ 2.800,00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">⏱️ Prazo:</span>
+                        <span class="detail-value deadline">5 dias úteis</span>
+                    </div>
+                </div>
+
+                <span class="badge badge-warning">⚠️ Requer análise do código</span>
+
+                <a href="https://kiosferajobs.com/job-details/GZ9M5Q2B1E9G/ampliacao-de-integracao-kobana-cancelar-e-alterar-vencimento" 
+                   target="_blank" 
+                   class="link-button">Ver Detalhes →</a>
+            </div>
+
+            <!-- Proposta 3 -->
+            <div class="proposal-card">
+                <div class="proposal-number">3</div>
+                <h2 class="proposal-title">Integração de Pagamento com Mercado Pago</h2>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Mercado Pago</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">PIX</span>
+                    <span class="tech-tag">Cartão</span>
+                    <span class="tech-tag">Boleto</span>
+                    <span class="tech-tag">MySQL</span>
+                </div>
+
+                <div class="proposal-details">
+                    <div class="detail-item">
+                        <span class="detail-label">💰 Valor:</span>
+                        <span class="detail-value price">R$ 4.000,00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">⏱️ Prazo:</span>
+                        <span class="detail-value deadline">10 dias úteis</span>
+                    </div>
+                </div>
+
+                <a href="https://kiosferajobs.com/job-details/B7I81CIVFUXP/integracao-de-pagamento-com-mercado-pago" 
+                   target="_blank" 
+                   class="link-button">Ver Detalhes →</a>
+            </div>
+
+            <!-- Proposta 4 -->
+            <div class="proposal-card">
+                <div class="proposal-number">4</div>
+                <h2 class="proposal-title">Correção de Sistema Laravel após Migração</h2>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Laravel</span>
+                    <span class="tech-tag">Plesk</span>
+                    <span class="tech-tag">DirectAdmin</span>
+                    <span class="tech-tag">Migração</span>
+                </div>
+
+                <div class="proposal-details">
+                    <div class="detail-item">
+                        <span class="detail-label">💰 Valor:</span>
+                        <span class="detail-value price">R$ 1.800,00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">⏱️ Prazo:</span>
+                        <span class="detail-value deadline">4 dias úteis</span>
+                    </div>
+                </div>
+
+                <a href="https://kiosferajobs.com/job-details/76RQ69P1OTB9/projeto-correcao-de-sistema-laravel-apos-migracao-plesk-directadmin" 
+                   target="_blank" 
+                   class="link-button">Ver Detalhes →</a>
+            </div>
+
+            <!-- Proposta 5 -->
+            <div class="proposal-card">
+                <div class="proposal-number">5</div>
+                <h2 class="proposal-title">Auditoria de Segurança e Integração Push In Pay</h2>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">SmartStore</span>
+                    <span class="tech-tag">Auditoria</span>
+                    <span class="tech-tag">Push In Pay</span>
+                    <span class="tech-tag">Segurança</span>
+                </div>
+
+                <div class="proposal-details">
+                    <div class="detail-item">
+                        <span class="detail-label">💰 Valor:</span>
+                        <span class="detail-value price">R$ 1.800,00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">⏱️ Prazo:</span>
+                        <span class="detail-value deadline">7 a 10 dias úteis</span>
+                    </div>
+                </div>
+
+                <span class="badge badge-warning">⚠️ Requer análise do código</span>
+                <span class="badge badge-info">📄 Requer análise de documentação da API</span>
+
+                <a href="https://kiosferajobs.com/user/proposal/eec42aa3-50fe-4b5a-af3d-070598e134dd/create" 
+                   target="_blank" 
+                   class="link-button">Ver Detalhes →</a>
+            </div>
+        </div>
+
+        <div class="notes">
+            <h3>📋 Observações Importantes</h3>
+            <ul>
+                <li>Propostas marcadas com <span class="badge badge-warning">⚠️</span> requerem análise prévia do código existente</li>
+                <li>Proposta 5 requer análise da documentação da API Push In Pay</li>
+                <li>Prazos são estimados em dias úteis e podem variar conforme complexidade</li>
+                <li>Valores podem ser ajustados após análise detalhada do projeto</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>© 2025 Denio Gomes. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
