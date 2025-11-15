@@ -47,7 +47,7 @@
       "title": "Frontend",
       "description": "Reactive, accessible, and responsive interfaces with UX at the core.",
       "item1": "React · Next.js",
-      "item2": "Vue · Vite",
+      "item2": "VueJS · Vite",
       "item3": "Tailwind · Radix"
     },
     "backend": {
@@ -81,7 +81,7 @@
     },
     "clube": {
       "name": "Dona Clara Loyalty Club",
-      "description": "Loyalty ecosystem with a Vite frontend, React dashboard, and Laravel API for B2B integrations.",
+      "description": "Loyalty ecosystem with frontend developed with React + Vite, React dashboard, and Laravel API for B2B integrations.",
       "tech1": "React",
       "tech2": "Vite",
       "tech3": "Tailwind CSS",
@@ -92,8 +92,8 @@
     },
     "indique": {
       "name": "Refer a Friend · Dona Clara",
-      "description": "Referral program with a Vue frontend, automated workflows, and a Laravel API integrated with TOTVS.",
-      "tech1": "Vue",
+      "description": "Referral program with a VueJS frontend, automated workflows, and a Laravel API integrated with TOTVS.",
+      "tech1": "VueJS",
       "tech2": "Axios",
       "tech3": "Sass",
       "tech4": "Laravel",

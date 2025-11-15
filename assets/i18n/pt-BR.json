@@ -47,7 +47,7 @@
       "title": "Frontend",
       "description": "Interfaces reativas, acessíveis e responsivas com foco em UX.",
       "item1": "React · Next.js",
-      "item2": "Vue · Vite",
+      "item2": "VueJS · Vite",
       "item3": "Tailwind · Radix"
     },
     "backend": {
@@ -81,7 +81,7 @@
     },
     "clube": {
       "name": "Clube de Vantagens Colégio Dona Clara",
-      "description": "Ecossistema de fidelidade com frontend Vite, dashboard React e API Laravel para integrações B2B.",
+      "description": "Ecossistema de fidelidade com front desenvolvido com React + Vite, dashboard React e API Laravel para integrações B2B.",
       "tech1": "React",
       "tech2": "Vite",
       "tech3": "Tailwind CSS",
@@ -92,8 +92,8 @@
     },
     "indique": {
       "name": "Indique um Amigo Colégio Dona Clara",
-      "description": "Programa de indicação com frontend Vue, workflows automatizados e API Laravel integrada ao TOTVS.",
-      "tech1": "Vue",
+      "description": "Programa de indicação com frontend VueJS, workflows automatizados e API Laravel integrada ao TOTVS.",
+      "tech1": "VueJS",
       "tech2": "Axios",
       "tech3": "Sass",
       "tech4": "Laravel",

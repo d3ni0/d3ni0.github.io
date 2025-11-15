@@ -390,6 +390,11 @@ select:focus-visible {
   cursor: zoom-in;
 }
 
+.project-figure img.crop-image {
+  object-fit: cover;
+  object-position: center;
+}
+
 .project-card:hover .project-figure img,
 .project-card:focus-within .project-figure img {
   transform: scale(1.02);
