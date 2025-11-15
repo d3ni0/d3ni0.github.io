@@ -46,16 +46,17 @@
     "frontend": {
       "title": "Frontend",
       "description": "Reactive, accessible, and responsive interfaces with UX at the core.",
-      "item1": "React · Next.js",
+      "item1": "React · React Native",
       "item2": "VueJS · Vite",
-      "item3": "Tailwind · Radix"
+      "item3": "TypeScript · Tailwind",
+      "item4": "Bootstrap · HTML/CSS"
     },
     "backend": {
       "title": "Backend & Data",
       "description": "Secure APIs, partner integrations, and automated workflows.",
-      "item1": "Laravel · PHP",
-      "item2": "Node.js · Express",
-      "item3": "MySQL · Postgres"
+      "item1": "NodeJS · NestJS",
+      "item2": "Laravel · PHP",
+      "item3": "Prisma · APIs"
     },
     "delivery": {
       "title": "Delivery & Ops",
@@ -70,25 +71,27 @@
     "subtitle": "Highlights using modern stacks across multiple business contexts.",
     "site2": {
       "name": "Official Dona Clara School Site",
-      "description": "Institutional portal with headless architecture, CMS, and real-time integrations.",
+      "description": "Institutional portal with headless architecture and real-time integrations.",
       "tech1": "React",
       "tech2": "Vite",
       "tech3": "TypeScript",
       "tech4": "Tailwind CSS",
       "tech5": "Radix UI",
       "tech6": "PHP",
-      "tech7": "Cloudflare"
+      "tech7": "Cloudflare",
+      "link": "View project"
     },
     "clube": {
       "name": "Dona Clara Loyalty Club",
-      "description": "Loyalty ecosystem with frontend developed with React + Vite, React dashboard, and Laravel API for B2B integrations.",
+      "description": "Loyalty ecosystem with site and dashboard developed with React + Vite, TOTVS API and Laravel API for B2B integrations.",
       "tech1": "React",
       "tech2": "Vite",
       "tech3": "Tailwind CSS",
       "tech4": "React Router",
       "tech5": "Axios",
       "tech6": "Laravel",
-      "tech7": "TOTVS API"
+      "tech7": "TOTVS API",
+      "link": "View project"
     },
     "indique": {
       "name": "Refer a Friend · Dona Clara",
@@ -98,14 +101,35 @@
       "tech3": "Sass",
       "tech4": "Laravel",
       "tech5": "TOTVS API",
-      "tech6": "SendGrid"
+      "tech6": "SendGrid",
+      "link": "View project"
     },
     "xxi": {
       "name": "The School of the 21st Century",
       "description": "Responsive landing page using Bootstrap 5, custom components, and conversion optimization.",
       "tech1": "HTML",
       "tech2": "Bootstrap",
-      "tech3": "CSS & Animations"
+      "tech3": "CSS & Animations",
+      "link": "View project"
+    },
+    "copa": {
+      "name": "Rocketseat | NLW Copa - Ignite Track",
+      "description": "Project created during the NLW COPA event where a World Cup 22 betting system was developed.",
+      "tech1": "React",
+      "tech2": "React Native",
+      "tech3": "TypeScript",
+      "tech4": "Tailwind CSS",
+      "tech5": "Node.js",
+      "tech6": "Prisma",
+      "link": "View project"
+    },
+    "notification": {
+      "name": "Backend - Notification Consumption",
+      "description": "Backend API developed with NestJS for notification management, including creation, cancellation, read status marking, and notification counting.",
+      "tech1": "NodeJS",
+      "tech2": "NestJS",
+      "tech3": "Prisma",
+      "link": "View project"
     }
   },
   "contact": {
@@ -118,6 +142,10 @@
   },
   "footer": {
     "copy": "© 2025 d3ni0&trade;. All rights reserved."
+  },
+  "whatsapp": {
+    "label": "Talk to me",
+    "app": "WhatsApp"
   }
 }
 

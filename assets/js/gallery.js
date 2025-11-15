@@ -29,7 +29,9 @@ const initGallery = () => {
 
   figures.forEach((figureImage) => {
     figureImage.addEventListener('click', () => {
-      image.src = figureImage.src;
+      // Use data-full-image if available, otherwise use the src
+      const fullImageSrc = figureImage.getAttribute('data-full-image') || figureImage.src;
+      image.src = fullImageSrc;
       image.alt = figureImage.alt || '';
       lightbox.classList.add('is-visible');
       closeButton.focus();
