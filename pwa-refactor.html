@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <title>Proposta Comercial - Refatoração de PWA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --color-background: #050505;
+            --color-foreground: #f7f7f7;
+            --color-accent: rgba(192, 132, 252, 1);
+            --color-muted: rgba(255, 255, 255, 0.7);
+            --container-width: min(1100px, 92vw);
+            --transition-base: 0.25s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--color-background);
+            color: var(--color-foreground);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-alt {
+            background: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* Header Logo */
+        .header-logo {
+            position: fixed;
+            top: 1.5rem;
+            left: 1.5rem;
+            z-index: 1000;
+            width: 120px;
+            height: auto;
+        }
+
+        .header-logo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 1rem 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.95rem;
+            color: var(--color-accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin: 0 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin: 0 0 1.5rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: clamp(1.15rem, 2vw, 1.5rem);
+            color: var(--color-muted);
+            margin: 0 0 2rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            background: rgba(192, 132, 252, 0.1);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+            color: var(--color-accent);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: -3rem auto 0;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform var(--transition-base), border-color var(--transition-base);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(192, 132, 252, 0.6);
+        }
+
+        .stat-value {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--color-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: var(--color-muted);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        /* Apps Grid */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin-top: 3rem;
+        }
+
+        .app-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 2rem;
+            transition: transform var(--transition-base), border-color var(--transition-base);
+            position: relative;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--color-accent);
+            border-radius: 18px 18px 0 0;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .app-card:nth-child(2)::before {
+            background: rgba(99, 102, 241, 1);
+        }
+
+        .app-card:nth-child(3)::before {
+            background: rgba(236, 72, 153, 1);
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(192, 132, 252, 0.6);
+        }
+
+        .app-card:hover::before {
+            opacity: 1;
+        }
+
+        .app-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .app-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+        }
+
+        .app-card ul {
+            list-style: none;
+        }
+
+        .app-card li {
+            padding: 0.6rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            color: var(--color-muted);
+            font-size: 0.95rem;
+        }
+
+        .app-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .tech-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .tech-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .tech-category h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .tech-badge {
+            background: rgba(5, 5, 5, 0.75);
+            border: 1px solid rgba(192, 132, 252, 0.4);
+            color: var(--color-foreground);
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all var(--transition-base);
+        }
+
+        .tech-badge:hover {
+            border-color: var(--color-accent);
+            background: rgba(192, 132, 252, 0.1);
+        }
+
+        .tech-badge.secondary {
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        .tech-badge.secondary:hover {
+            border-color: rgba(99, 102, 241, 1);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .tech-badge.accent {
+            border-color: rgba(236, 72, 153, 0.4);
+        }
+
+        .tech-badge.accent:hover {
+            border-color: rgba(236, 72, 153, 1);
+            background: rgba(236, 72, 153, 0.1);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 3rem 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(192, 132, 252, 0) 0%, rgba(192, 132, 252, 0.45) 50%, rgba(192, 132, 252, 0) 100%);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.75rem;
+            border-radius: 18px;
+            width: 45%;
+            transition: border-color var(--transition-base);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 1.75rem;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--color-accent);
+            border: 3px solid var(--color-background);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .timeline-content p {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-days {
+            display: inline-block;
+            background: rgba(192, 132, 252, 0.1);
+            color: var(--color-accent);
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Investment */
+        .investment {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .investment h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .investment-price {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .investment-subtitle {
+            font-size: 1.15rem;
+            color: var(--color-muted);
+            margin-bottom: 2rem;
+        }
+
+        .payment-plan {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .payment-item {
+            background: rgba(5, 5, 5, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .payment-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-item .amount {
+            margin-top: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-foreground);
+        }
+
+        /* Not Included */
+        .not-included {
+            background: rgba(236, 72, 153, 0.08);
+            border-left: 3px solid rgba(236, 72, 153, 0.6);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            padding: 1.75rem;
+            border-radius: 18px;
+            margin-top: 2.5rem;
+        }
+
+        .not-included h4 {
+            color: rgba(236, 72, 153, 1);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .not-included ul {
+            list-style: none;
+            color: var(--color-muted);
+        }
+
+        .not-included li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .not-included li::before {
+            content: '⚠';
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+
+        /* Observation */
+        .observation {
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 1.75rem;
+            border-radius: 18px;
+            margin-top: 2.5rem;
+        }
+
+        .observation h4 {
+            color: rgba(99, 102, 241, 1);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .observation p {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta {
+            background: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 5rem 1rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+        }
+
+        .cta p {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            color: var(--color-muted);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: 0.75rem 1.6rem;
+            font-weight: 600;
+            border: 1px solid transparent;
+            transition: transform var(--transition-base), box-shadow var(--transition-base),
+                background var(--transition-base), color var(--transition-base);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn.primary {
+            background: var(--color-accent);
+            color: #050505;
+        }
+
+        .btn.primary:hover,
+        .btn.primary:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(192, 132, 252, 0.35);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(5, 5, 5, 0.85);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--color-muted);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        footer p:last-child {
+            margin-top: 1rem;
+            opacity: 0.6;
+            font-size: 0.85rem;
+        }
+
+        /* Contact */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 2.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 2rem;
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .contact-label {
+            display: block;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .contact-link {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-foreground);
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            color: var(--color-accent);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 9999;
+            animation: pulse-whatsapp 2s ease-in-out infinite;
+        }
+
+        .whatsapp-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #25D366, #20BA5A);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(135deg, #20BA5A, #25D366);
+        }
+
+        .whatsapp-icon {
+            width: 28px;
+            height: 28px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .whatsapp-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.3;
+        }
+
+        .whatsapp-text span:first-child {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .whatsapp-text span:last-child {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        @keyframes pulse-whatsapp {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .whatsapp-button::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50px;
+            border: 2px solid rgba(37, 211, 102, 0.3);
+            animation: ripple 2s ease-out infinite;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-logo {
+                top: 1rem;
+                left: 1rem;
+                width: 100px;
+            }
+
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                margin-top: -2rem;
+            }
+
+            .timeline::before {
+                left: 1rem;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 3rem);
+                margin-left: 3rem !important;
+                margin-right: 0 !important;
+            }
+
+            .timeline-dot {
+                left: 1rem;
+            }
+
+            .investment {
+                padding: 2rem 1.5rem;
+            }
+
+            .payment-plan {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-stack {
+                padding: 1.75rem 1.5rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .whatsapp-float {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .whatsapp-button {
+                padding: 0.85rem 1.25rem;
+                font-size: 0.9rem;
+            }
+
+            .whatsapp-text span:first-child {
+                font-size: 0.75rem;
+            }
+
+            .whatsapp-text span:last-child {
+                font-size: 0.95rem;
+            }
+
+            .whatsapp-icon {
+                width: 24px;
+                height: 24px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Logo -->
+    <div class="header-logo">
+        <img src="/assets/images/logo2.png" alt="Denio Gomes Logo">
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-eyebrow">Proposta Comercial</div>
+            <h1>Refatoração de PWA</h1>
+            <p class="subtitle">PHP, JavaScript e CSS + Sincronização Offline/Online</p>
+            <div class="hero-badges">
+                <span class="hero-badge">PWA</span>
+                <span class="hero-badge">PHP</span>
+                <span class="hero-badge">JavaScript</span>
+                <span class="hero-badge">IndexedDB</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div class="stat-card fade-in">
+            <div class="stat-value">R$ 14.200</div>
+            <div class="stat-label">Investimento</div>
+        </div>
+        <div class="stat-card fade-in">
+            <div class="stat-value">30</div>
+            <div class="stat-label">Dias Úteis</div>
+        </div>
+        <div class="stat-card fade-in">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Offline First</div>
+        </div>
+        <div class="stat-card fade-in">
+            <div class="stat-value">API REST</div>
+            <div class="stat-label">Arquitetura Limpa</div>
+        </div>
+    </div>
+
+    <!-- Overview -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre o Projeto</h2>
+            <p class="section-subtitle fade-in">
+                Refatoração completa de uma Progressive Web App (PWA) envolvendo PHP, JavaScript e CSS. 
+                O projeto visa organizar e otimizar o código para produção, transformando o PHP em uma 
+                <strong style="color: var(--color-accent);">API REST limpa e organizada</strong>, 
+                refatorando JavaScript e CSS de forma <strong style="color: var(--color-accent);">modular e global</strong>, 
+                e garantindo <strong style="color: var(--color-accent);">sincronização offline → online</strong> 
+                usando IndexedDB (Dexie).
+            </p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Serviços Incluídos</h2>
+            <div class="apps-grid">
+                <div class="app-card fade-in">
+                    <div class="app-icon">🔧</div>
+                    <h3>Refatoração PHP</h3>
+                    <ul>
+                        <li>Transformação em API REST limpa</li>
+                        <li>Estrutura organizada e escalável</li>
+                        <li>Padrões de código modernos</li>
+                        <li>Documentação de endpoints</li>
+                        <li>Tratamento de erros padronizado</li>
+                        <li>Validação de dados</li>
+                    </ul>
+                </div>
+                <div class="app-card fade-in">
+                    <div class="app-icon">⚡</div>
+                    <h3>Refatoração JavaScript/CSS</h3>
+                    <ul>
+                        <li>Código modular e global</li>
+                        <li>Organização por funcionalidades</li>
+                        <li>Boas práticas ES6+</li>
+                        <li>CSS organizado e reutilizável</li>
+                        <li>Comentários claros</li>
+                        <li>Estrutura fácil de manter</li>
+                    </ul>
+                </div>
+                <div class="app-card fade-in">
+                    <div class="app-icon">📦</div>
+                    <h3>Migração de Assets</h3>
+                    <ul>
+                        <li>Bootstrap nos assets locais</li>
+                        <li>Font Awesome nos assets locais</li>
+                        <li>Remoção de dependências CDN</li>
+                        <li>Otimização para PWA offline</li>
+                        <li>Service Worker atualizado</li>
+                        <li>Cache estratégico</li>
+                    </ul>
+                </div>
+                <div class="app-card fade-in">
+                    <div class="app-icon">🔄</div>
+                    <h3>Sincronização Offline/Online</h3>
+                    <ul>
+                        <li>Implementação com IndexedDB (Dexie)</li>
+                        <li>Queue de operações offline</li>
+                        <li>Sincronização automática</li>
+                        <li>Resolução de conflitos</li>
+                        <li>Manutenção da funcionalidade existente</li>
+                        <li>Otimização do fluxo de dados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Stack Tecnológica</h2>
+            <div class="tech-stack fade-in">
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">API REST</span>
+                        <span class="tech-badge">JSON</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge secondary">JavaScript ES6+</span>
+                        <span class="tech-badge secondary">CSS Modular</span>
+                        <span class="tech-badge secondary">Bootstrap</span>
+                        <span class="tech-badge secondary">Font Awesome</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>PWA & Storage</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge accent">Service Workers</span>
+                        <span class="tech-badge accent">IndexedDB</span>
+                        <span class="tech-badge accent">Dexie.js</span>
+                        <span class="tech-badge accent">Cache API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Cronograma de Desenvolvimento</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h4>Fase 1: Análise e Planejamento</h4>
+                        <p>Análise do código atual e planejamento da refatoração</p>
+                        <span class="phase-days">3 dias</span>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h4>Fase 2: Refatoração PHP</h4>
+                        <p>Transformação em API REST limpa e organizada</p>
+                        <span class="phase-days">8 dias</span>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h4>Fase 3: Refatoração JS/CSS</h4>
+                        <p>Modularização e organização do código frontend</p>
+                        <span class="phase-days">6 dias</span>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h4>Fase 4: Migração de Assets</h4>
+                        <p>Bootstrap e Font Awesome para assets locais</p>
+                        <span class="phase-days">2 dias</span>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h4>Fase 5: Sincronização Offline/Online</h4>
+                        <p>Implementação com IndexedDB (Dexie)</p>
+                        <span class="phase-days">8 dias</span>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h4>Fase 6: Testes e Finalização</h4>
+                        <p>Testes, documentação e ajustes finais</p>
+                        <span class="phase-days">3 dias</span>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <div class="stat-card" style="display: inline-block; min-width: 300px;">
+                    <div class="stat-value">30 dias úteis</div>
+                    <div class="stat-label">Prazo Total</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Investimento</h2>
+            <div class="investment fade-in">
+                <h3>Valor Total do Projeto</h3>
+                <div class="investment-price">R$ 14.200,00</div>
+                <p class="investment-subtitle">Prazo de entrega: 30 dias úteis</p>
+                
+                <h4 style="margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 1.15rem; font-weight: 600;">Forma de Pagamento</h4>
+                <div class="payment-plan">
+                    <div class="payment-item">
+                        <strong>40%</strong>
+                        <div>Na assinatura do contrato</div>
+                        <div class="amount">R$ 5.680,00</div>
+                    </div>
+                    <div class="payment-item">
+                        <strong>40%</strong>
+                        <div>Na entrega da refatoração PHP e JS/CSS</div>
+                        <div class="amount">R$ 5.680,00</div>
+                    </div>
+                    <div class="payment-item">
+                        <strong>20%</strong>
+                        <div>Na entrega final com sincronização</div>
+                        <div class="amount">R$ 2.840,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="observation fade-in">
+                <h4>📋 Observação Importante</h4>
+                <p>
+                    <strong>Cabe análise prévia do código atual</strong> para validar a complexidade real do projeto 
+                    e ajustar o escopo, se necessário. Esta análise será realizada antes do início do desenvolvimento 
+                    para garantir que todos os requisitos sejam atendidos adequadamente.
+                </p>
+            </div>
+
+            <div class="not-included fade-in">
+                <h4>⚠️ Não Incluído no Valor</h4>
+                <ul>
+                    <li>Hospedagem e infraestrutura</li>
+                    <li>Domínio</li>
+                    <li>Certificados SSL</li>
+                    <li>Serviços de terceiros (APIs externas)</li>
+                    <li>Design/UI adicional não especificado</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Entregáveis</h2>
+            <div class="apps-grid">
+                <div class="app-card fade-in">
+                    <div class="app-icon">📦</div>
+                    <h3>Código Fonte</h3>
+                    <ul>
+                        <li>Repositório Git completo</li>
+                        <li>Código refatorado e organizado</li>
+                        <li>Comentários claros</li>
+                        <li>Estrutura modular</li>
+                    </ul>
+                </div>
+                <div class="app-card fade-in">
+                    <div class="app-icon">📚</div>
+                    <h3>Documentação</h3>
+                    <ul>
+                        <li>Documentação técnica da API</li>
+                        <li>Guia de estrutura do código</li>
+                        <li>Documentação de sincronização</li>
+                        <li>Manual de manutenção</li>
+                    </ul>
+                </div>
+                <div class="app-card fade-in">
+                    <div class="app-icon">✅</div>
+                    <h3>Testes</h3>
+                    <ul>
+                        <li>PWA funcionando offline</li>
+                        <li>Sincronização testada</li>
+                        <li>API REST funcional</li>
+                        <li>Código validado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+        <h2>Pronto para começar?</h2>
+        <p>Entre em contato para discutirmos os detalhes do seu projeto</p>
+        <a href="#contact" class="btn primary">Falar com o Desenvolvedor</a>
+    </div>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <div class="contact-card fade-in">
+                <h3>Informações de Contato</h3>
+                <div class="contact-item">
+                    <span class="contact-label">Desenvolvedor</span>
+                    <div class="contact-link">Denio Gomes</div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:deniogomes@gmail.com" class="contact-link">deniogomes@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">WhatsApp</span>
+                    <a href="https://wa.me/5531996001077" class="contact-link">+55 (31) 99600-1077</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5531996001077?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20proposta%20de%20refatoração%20de%20PWA." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="whatsapp-button">
+            <div class="whatsapp-icon">💬</div>
+            <div class="whatsapp-text">
+                <span>Fale comigo</span>
+                <span>WhatsApp</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Esta proposta é válida por 30 dias a partir da data de emissão.</p>
+            <p>© 2025 Denio Gomes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
