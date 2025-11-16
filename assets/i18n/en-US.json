@@ -47,7 +47,7 @@
       "title": "Frontend",
       "description": "Reactive, accessible, and responsive interfaces with UX at the core.",
       "item1": "React · React Native",
-      "item2": "VueJS · Vite",
+      "item2": "Expo · VueJS",
       "item3": "TypeScript · Tailwind",
       "item4": "Bootstrap · HTML/CSS"
     },
@@ -130,11 +130,34 @@
       "tech2": "NestJS",
       "tech3": "Prisma",
       "link": "View project"
+    },
+    "iaMastery": {
+      "name": "NLW IA - Mastery",
+      "description": "Web platform that allows video uploads and uses artificial intelligence to automatically generate optimized titles and strategic descriptions, improving content indexing and reach.",
+      "tech1": "Vite",
+      "tech2": "shadcn/ui",
+      "tech3": "Tailwind CSS",
+      "tech4": "Radix UI",
+      "tech5": "TypeScript",
+      "tech6": "Fastify",
+      "tech7": "Prisma",
+      "tech8": "OpenAI",
+      "link": "View project"
+    },
+    "nearby": {
+      "name": "Nearby App",
+      "description": "Mobile app developed during Rocketseat's NLW using React Native and Expo. Allows users to locate and explore nearby points on an interactive map.",
+      "tech1": "React Native",
+      "tech2": "Expo",
+      "tech3": "TypeScript",
+      "tech4": "Axios",
+      "tech5": "React Native Maps",
+      "link": "View project"
     }
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Let’s create something amazing together.",
+    "subtitle": "Let's build something amazing together.",
     "paragraph": "Open to new partnerships, consulting engagements, and purpose-driven projects. Send a message or connect on social media.",
     "emailLabel": "Email",
     "phoneLabel": "WhatsApp",

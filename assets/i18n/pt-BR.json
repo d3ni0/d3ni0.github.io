@@ -47,7 +47,7 @@
       "title": "Frontend",
       "description": "Interfaces reativas, acessíveis e responsivas com foco em UX.",
       "item1": "React · React Native",
-      "item2": "VueJS · Vite",
+      "item2": "Expo · VueJS",
       "item3": "TypeScript · Tailwind",
       "item4": "Bootstrap · HTML/CSS"
     },
@@ -130,11 +130,34 @@
       "tech2": "NestJS",
       "tech3": "Prisma",
       "link": "Ver projeto"
+    },
+    "iaMastery": {
+      "name": "NLW IA - Mastery",
+      "description": "Plataforma web que permite upload de vídeos e utiliza inteligência artificial para gerar automaticamente títulos otimizados e descrições estratégicas, melhorando a indexação e o alcance do conteúdo.",
+      "tech1": "Vite",
+      "tech2": "shadcn/ui",
+      "tech3": "Tailwind CSS",
+      "tech4": "Radix UI",
+      "tech5": "TypeScript",
+      "tech6": "Fastify",
+      "tech7": "Prisma",
+      "tech8": "OpenAI",
+      "link": "Ver projeto"
+    },
+    "nearby": {
+      "name": "Nearby App",
+      "description": "Aplicativo mobile desenvolvido durante o NLW da Rocketseat utilizando React Native e Expo. Permite localizar e explorar pontos próximos em um mapa interativo.",
+      "tech1": "React Native",
+      "tech2": "Expo",
+      "tech3": "TypeScript",
+      "tech4": "Axios",
+      "tech5": "React Native Maps",
+      "link": "Ver projeto"
     }
   },
   "contact": {
     "title": "Contato",
-    "subtitle": "Vamos criar algo incrível juntos.",
+    "subtitle": "Vamos construir algo incrível juntos.",
     "paragraph": "Aberto a novas parcerias, consultorias e projetos com propósito. Envie uma mensagem ou conecte-se nas redes.",
     "emailLabel": "E-mail",
     "phoneLabel": "WhatsApp",

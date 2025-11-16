@@ -291,10 +291,14 @@ select:focus-visible {
 }
 
 /* About */
+#about {
+  padding-top: 3rem;
+}
+
 .section-divider {
   width: var(--container-width);
   height: 1px;
-  margin: -1rem auto 4rem;
+  margin: -1rem auto 2rem;
   background: linear-gradient(90deg, rgba(192, 132, 252, 0) 0%, rgba(192, 132, 252, 0.45) 50%, rgba(192, 132, 252, 0) 100%);
   opacity: 0.8;
 }
@@ -340,11 +344,15 @@ select:focus-visible {
 }
 
 /* Projects */
+#projects {
+  padding-top: 3rem;
+}
+
 .projects-grid {
-  display: grid;
+  column-count: auto;
+  column-width: 300px;
+  column-gap: 1.8rem;
   margin-top: 2.5rem;
-  gap: 1.8rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .project-card {
@@ -355,6 +363,10 @@ select:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 1.8rem;
+  height: auto;
   transition: transform var(--transition-base), border-color var(--transition-base);
 }
 
@@ -480,6 +492,76 @@ select:focus-visible {
 }
 
 /* Contact */
+.contact-section {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(192, 132, 252, 0) 0%, rgba(192, 132, 252, 0.8) 50%, rgba(192, 132, 252, 0) 100%);
+  border-radius: 2px;
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+.contact-header .section-title {
+  margin-bottom: 0;
+}
+
+.contact-cta-wrapper {
+  text-align: center;
+  margin: -8rem 0 0 0;
+  padding: 0;
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-cta {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin: 0;
+  padding: 1rem 0;
+  background: linear-gradient(135deg, rgba(192, 132, 252, 1) 0%, rgba(99, 102, 241, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(192, 132, 252, 0) 0%, rgba(192, 132, 252, 0.7) 50%, rgba(192, 132, 252, 0) 100%);
+  border-radius: 2px;
+}
+
+.contact-section .section-content {
+  margin-top: -2rem;
+}
+
 .contact-list {
   list-style: none;
   padding: 0;
@@ -571,18 +653,11 @@ select:focus-visible {
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
   font-size: 0.9rem;
   color: var(--color-muted);
-}
-
-.footer-language {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  text-align: center;
 }
 
 /* WhatsApp Float Button */

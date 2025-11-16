@@ -390,6 +390,100 @@
                 <span data-i18n="projects.notification.link">Ver projeto</span>
               </a>
             </article>
+            <article class="project-card">
+              <figure class="project-figure">
+                <img
+                  src="assets/images/projects/nearby.png"
+                  alt="Screenshot of Nearby App mobile project"
+                  loading="lazy"
+                />
+              </figure>
+              <header>
+                <h3 data-i18n="projects.nearby.name">Nearby App</h3>
+                <p class="project-description" data-i18n="projects.nearby.description">
+                  Aplicativo mobile desenvolvido durante o NLW da Rocketseat utilizando React Native e Expo. Permite localizar e explorar pontos próximos em um mapa interativo.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li>
+                  <span class="iconify" data-icon="simple-icons:react"></span>
+                  <span data-i18n="projects.nearby.tech1">React Native</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:expo"></span>
+                  <span data-i18n="projects.nearby.tech2">Expo</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:typescript"></span>
+                  <span data-i18n="projects.nearby.tech3">TypeScript</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:axios"></span>
+                  <span data-i18n="projects.nearby.tech4">Axios</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:googlemaps"></span>
+                  <span data-i18n="projects.nearby.tech5">React Native Maps</span>
+                </li>
+              </ul>
+              <a href="https://github.com/d3ni0/nlw-mobile-nearby" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span class="iconify" data-icon="mdi:open-in-new"></span>
+                <span data-i18n="projects.nearby.link">Ver projeto</span>
+              </a>
+            </article>
+            <article class="project-card">
+              <figure class="project-figure">
+                <img
+                  src="assets/images/projects/ia-mastery.png"
+                  alt="Screenshot of NLW IA Mastery project"
+                  loading="lazy"
+                />
+              </figure>
+              <header>
+                <h3 data-i18n="projects.iaMastery.name">NLW IA - Mastery</h3>
+                <p class="project-description" data-i18n="projects.iaMastery.description">
+                  Plataforma web que permite upload de vídeos e utiliza inteligência artificial para gerar automaticamente títulos otimizados e descrições estratégicas, melhorando a indexação e o alcance do conteúdo.
+                </p>
+              </header>
+              <ul class="tech-list">
+                <li>
+                  <span class="iconify" data-icon="simple-icons:vite"></span>
+                  <span data-i18n="projects.iaMastery.tech1">Vite</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:react"></span>
+                  <span data-i18n="projects.iaMastery.tech2">shadcn/ui</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:tailwindcss"></span>
+                  <span data-i18n="projects.iaMastery.tech3">Tailwind CSS</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:radixui"></span>
+                  <span data-i18n="projects.iaMastery.tech4">Radix UI</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:typescript"></span>
+                  <span data-i18n="projects.iaMastery.tech5">TypeScript</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:fastify"></span>
+                  <span data-i18n="projects.iaMastery.tech6">Fastify</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:prisma"></span>
+                  <span data-i18n="projects.iaMastery.tech7">Prisma</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:openai"></span>
+                  <span data-i18n="projects.iaMastery.tech8">OpenAI</span>
+                </li>
+              </ul>
+              <a href="https://github.com/d3ni0/nlw-ia-mastery" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span class="iconify" data-icon="mdi:open-in-new"></span>
+                <span data-i18n="projects.iaMastery.link">Ver projeto</span>
+              </a>
+            </article>
           </div>
         </div>
       </section>
@@ -413,7 +507,7 @@
                   >React · React Native</span
                 >
                 <span class="badge" data-i18n="skills.frontend.item2"
-                  >VueJS · Vite</span
+                  >Expo · VueJS</span
                 >
                 <span class="badge" data-i18n="skills.frontend.item3"
                   >TypeScript · Tailwind</span
@@ -461,12 +555,14 @@
         </div>
       </section>
 
-      <section id="contact" class="section section-alt">
+      <section id="contact" class="section section-alt contact-section">
         <div class="container section-grid">
-          <div class="section-header">
+          <div class="section-header contact-header">
             <h2 class="section-title" data-i18n="contact.title">Contato</h2>
-            <p class="section-subtitle" data-i18n="contact.subtitle">
-              Vamos criar algo incrível juntos.
+          </div>
+          <div class="contact-cta-wrapper">
+            <p class="contact-cta" data-i18n="contact.subtitle">
+              Vamos construir algo incrível juntos.
             </p>
           </div>
           <div class="section-content">
@@ -524,16 +620,6 @@
         <p data-i18n="footer.copy">
           © 2025 d3ni0. Todos os direitos reservados.
         </p>
-        <div class="footer-language">
-          <label for="language-select-footer" data-i18n="nav.languageLabel"
-            >Idioma</label
-          >
-          <select id="language-select-footer" aria-label="Language selector footer">
-            <option value="pt-BR">Português (BR)</option>
-            <option value="en-US">English (US)</option>
-            <option value="es-AR">Español (AR)</option>
-          </select>
-        </div>
       </div>
     </footer>
 
