@@ -47,16 +47,18 @@
       "title": "Frontend",
       "description": "Reactive, accessible, and responsive interfaces with UX at the core.",
       "item1": "React · React Native",
-      "item2": "Expo · VueJS",
-      "item3": "TypeScript · Tailwind",
-      "item4": "Bootstrap · HTML/CSS"
+      "item2": "Vite · Expo · VueJS",
+      "item3": "TypeScript · Tailwind CSS",
+      "item4": "Radix UI · React Router",
+      "item5": "Bootstrap · HTML/CSS"
     },
     "backend": {
       "title": "Backend & Data",
       "description": "Secure APIs, partner integrations, and automated workflows.",
-      "item1": "NodeJS · NestJS",
-      "item2": "Laravel · PHP",
-      "item3": "Prisma · APIs"
+      "item1": "NodeJS · Express · NestJS",
+      "item2": "Fastify · Laravel · PHP",
+      "item3": "Prisma · APIs",
+      "item4": "OpenAI · TOTVS API"
     },
     "delivery": {
       "title": "Delivery & Ops",
