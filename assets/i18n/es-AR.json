@@ -155,6 +155,15 @@
       "tech4": "Axios",
       "tech5": "React Native Maps",
       "link": "Ver proyecto"
+    },
+    "mundoInvertido": {
+      "name": "Mundo Invertido",
+      "description": "Landing page temática inspirada en Stranger Things con sistema de temas claro/oscuro, integración con Firebase Firestore para formularios y animaciones CSS avanzadas.",
+      "tech1": "HTML5",
+      "tech2": "CSS3",
+      "tech3": "JavaScript",
+      "tech4": "Firebase",
+      "link": "Ver proyecto"
     }
   },
   "contact": {
