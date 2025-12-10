@@ -164,6 +164,20 @@
       "tech3": "JavaScript",
       "tech4": "Firebase",
       "link": "Ver proyecto"
+    },
+    "sms": {
+      "name": "Sistema de SMS",
+      "description": "Plataforma completa para envío y gestión de SMS con dashboard React, API Laravel, integración con Infobip, Google Directory API y TOTVS API. Incluye programación de mensajes, reportes y webhooks.",
+      "tech1": "React",
+      "tech2": "TypeScript",
+      "tech3": "Vite",
+      "tech4": "Tailwind CSS",
+      "tech5": "React Router",
+      "tech6": "Laravel",
+      "tech7": "PHP",
+      "tech8": "API TOTVS",
+      "tech9": "Oracle Cloud",
+      "link": "Ver proyecto"
     }
   },
   "contact": {
