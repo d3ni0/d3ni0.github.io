@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="meta.title">Denio Gomes · Portfolio</title>
+    <title data-i18n="meta.title">{ d3ni0 }</title>
     <meta
       name="description"
       data-i18n="meta.description"
@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=2.0" />
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js" defer></script>
   </head>
   <body>
@@ -36,11 +36,6 @@
             class="brand-logo"
           />
         </a>
-        <button class="menu-toggle" aria-label="Open menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
         <div class="nav-links">
           <a href="#about" data-i18n="nav.about">Sobre</a>
           <a href="#projects" data-i18n="nav.projects">Projetos</a>
@@ -182,6 +177,10 @@
                 <li>
                   <span class="iconify" data-icon="simple-icons:oracle"></span>
                   <span data-i18n="projects.sms.tech9">Oracle Cloud</span>
+                </li>
+                <li>
+                  <span class="iconify" data-icon="simple-icons:debian"></span>
+                  <span data-i18n="projects.sms.tech10">Debian server</span>
                 </li>
               </ul>
               <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
@@ -574,7 +573,7 @@
                   <span data-i18n="projects.mundoInvertido.tech4">Firebase</span>
                 </li>
               </ul>
-              <a href="https://github.com/d3ni0/mundoinvertido" target="_blank" rel="noopener noreferrer" class="project-link">
+              <a href="https://d3ni0.dev/mundoinvertido/" target="_blank" rel="noopener noreferrer" class="project-link">
                 <span class="iconify" data-icon="mdi:open-in-new"></span>
                 <span data-i18n="projects.mundoInvertido.link">Ver projeto</span>
               </a>
@@ -597,21 +596,21 @@
                 Interfaces reativas, acessíveis e responsivas com foco em UX.
               </p>
               <div class="badge-group">
-                <span class="badge" data-i18n="skills.frontend.item1"
-                  >React · React Native</span
-                >
-                <span class="badge" data-i18n="skills.frontend.item2"
-                  >Vite · Expo · VueJS</span
-                >
-                <span class="badge" data-i18n="skills.frontend.item3"
-                  >TypeScript · Tailwind CSS</span
-                >
-                <span class="badge" data-i18n="skills.frontend.item4"
-                  >Radix UI · React Router</span
-                >
-                <span class="badge" data-i18n="skills.frontend.item5"
-                  >Bootstrap · HTML/CSS</span
-                >
+                <span class="badge" data-i18n="skills.frontend.item1" data-icons="react,react">
+                  <span class="badge-text">React · React Native</span>
+                </span>
+                <span class="badge" data-i18n="skills.frontend.item2" data-icons="vite,expo,vuedotjs">
+                  <span class="badge-text">Vite · Expo · VueJS</span>
+                </span>
+                <span class="badge" data-i18n="skills.frontend.item3" data-icons="typescript,tailwindcss">
+                  <span class="badge-text">TypeScript · Tailwind CSS</span>
+                </span>
+                <span class="badge" data-i18n="skills.frontend.item4" data-icons="radixui,reactrouter">
+                  <span class="badge-text">Radix UI · React Router</span>
+                </span>
+                <span class="badge" data-i18n="skills.frontend.item5" data-icons="bootstrap,html5,css3">
+                  <span class="badge-text">Bootstrap · HTML/CSS</span>
+                </span>
               </div>
             </div>
             <div class="skill-card">
@@ -620,18 +619,21 @@
                 APIs seguras, integrações com parceiros e automação de fluxos.
               </p>
               <div class="badge-group">
-                <span class="badge" data-i18n="skills.backend.item1"
-                  >NodeJS · Express · NestJS</span
-                >
-                <span class="badge" data-i18n="skills.backend.item2"
-                  >Fastify · Laravel · PHP</span
-                >
-                <span class="badge" data-i18n="skills.backend.item3"
-                  >Prisma · APIs</span
-                >
-                <span class="badge" data-i18n="skills.backend.item4"
-                  >OpenAI · TOTVS API</span
-                >
+                <span class="badge" data-i18n="skills.backend.item1" data-icons="nodedotjs,express,nestjs">
+                  <span class="badge-text">NodeJS · Express · NestJS</span>
+                </span>
+                <span class="badge" data-i18n="skills.backend.item2" data-icons="fastify,laravel,php">
+                  <span class="badge-text">Fastify · Laravel · PHP</span>
+                </span>
+                <span class="badge" data-i18n="skills.backend.item3" data-icons="prisma">
+                  <span class="badge-text">Prisma · APIs</span>
+                </span>
+                <span class="badge" data-i18n="skills.backend.item4" data-icons="openai,totvs">
+                  <span class="badge-text">OpenAI · TOTVS API</span>
+                </span>
+                <span class="badge" data-i18n="skills.backend.item5" data-icons="debian">
+                  <span class="badge-text">Debian server</span>
+                </span>
               </div>
             </div>
             <div class="skill-card">
@@ -640,15 +642,15 @@
                 Monitoramento, observabilidade e pipelines enxutos.
               </p>
               <div class="badge-group">
-                <span class="badge" data-i18n="skills.delivery.item1"
-                  >GitHub Actions</span
-                >
-                <span class="badge" data-i18n="skills.delivery.item2"
-                  >CI/CD</span
-                >
-                <span class="badge" data-i18n="skills.delivery.item3"
-                  >Observabilidade</span
-                >
+                <span class="badge" data-i18n="skills.delivery.item1" data-icons="githubactions">
+                  <span class="badge-text">GitHub Actions</span>
+                </span>
+                <span class="badge" data-i18n="skills.delivery.item2" data-icons="gitlab">
+                  <span class="badge-text">CI/CD</span>
+                </span>
+                <span class="badge" data-i18n="skills.delivery.item3" data-icons="datadog">
+                  <span class="badge-text">Observabilidade</span>
+                </span>
               </div>
             </div>
           </div>
@@ -718,7 +720,7 @@
     <footer class="site-footer">
       <div class="container footer-content">
         <p data-i18n="footer.copy">
-          © 2025 d3ni0. Todos os direitos reservados.
+          © 2025 d3ni0™. All rights reserved.
         </p>
       </div>
     </footer>
@@ -737,8 +739,37 @@
       </a>
     </div>
 
-    <script src="assets/js/i18n.js" defer></script>
-    <script src="assets/js/gallery.js" defer></script>
+    <script src="assets/js/i18n.js?v=2.0" defer></script>
+    <script src="assets/js/gallery.js?v=2.0" defer></script>
+    <script>
+      // Force Iconify to render all icons after page load
+      function renderAllIcons() {
+        if (window.Iconify && window.Iconify.scan) {
+          window.Iconify.scan();
+        } else if (window.iconify && window.iconify.scan) {
+          window.iconify.scan();
+        }
+        // Force render each icon individually
+        document.querySelectorAll('.iconify[data-icon]').forEach(function(icon) {
+          if (!icon.innerHTML || icon.innerHTML.trim() === '' || icon.innerHTML.trim() === '<svg></svg>') {
+            var iconName = icon.getAttribute('data-icon');
+            if (iconName && window.Iconify && window.Iconify.renderSVG) {
+              window.Iconify.renderSVG(icon, iconName);
+            }
+          }
+        });
+      }
+      
+      window.addEventListener('load', function() {
+        setTimeout(renderAllIcons, 300);
+        setTimeout(renderAllIcons, 1000);
+      });
+      
+      // Also render after i18n loads
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(renderAllIcons, 800);
+      });
+    </script>
   </body>
 </html>
 

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Denio Gomes · Portafolio",
+    "title": "{ d3ni0 }",
     "description": "Portafolio de Denio Gomes con experiencias digitales omnicanal y productos educativos."
   },
   "nav": {
@@ -58,7 +58,8 @@
       "item1": "NodeJS · Express · NestJS",
       "item2": "Fastify · Laravel · PHP",
       "item3": "Prisma · APIs",
-      "item4": "OpenAI · TOTVS API"
+      "item4": "OpenAI · TOTVS API",
+      "item5": "Debian server"
     },
     "delivery": {
       "title": "Entrega y Ops",
@@ -177,6 +178,7 @@
       "tech7": "PHP",
       "tech8": "API TOTVS",
       "tech9": "Oracle Cloud",
+      "tech10": "Debian server",
       "link": "Ver proyecto"
     }
   },
@@ -189,7 +191,7 @@
     "linkedinLabel": "LinkedIn"
   },
   "footer": {
-    "copy": "© 2025 d3ni0&trade;. Todos los derechos reservados."
+    "copy": "© 2025 d3ni0™. All rights reserved."
   },
   "whatsapp": {
     "label": "Hablame",
